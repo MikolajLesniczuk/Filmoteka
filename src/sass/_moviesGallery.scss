@@ -1,0 +1,112 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+
+  &__link {
+    margin: 0 auto;
+  }
+  &__item {
+    margin: 20px 20px 0px 20px;
+    padding-bottom: 10px;
+    &-img {
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+      -webkit-box-shadow: 3px 4px 15px 2px rgba(66, 68, 90, 1);
+      -moz-box-shadow: 3px 4px 15px 2px rgba(66, 68, 90, 1);
+      box-shadow: 3px 4px 15px 2px rgba(66, 68, 90, 1);
+      transition-duration: 250ms;
+      &:focus,
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        transition-duration: 250ms;
+      }
+    }
+
+    &-header {
+      padding-top: 7px;
+      padding-left: 7px;
+      padding-bottom: 10px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 16px;
+      margin-top: 10px;
+      margin-bottom: 0px;
+    }
+
+    &-info {
+      padding-left: 7px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 14px;
+      margin-top: 0px;
+
+      color: #ff6b08;
+
+      &:last-child::before {
+        padding-right: 5px;
+        content: '| ';
+      }
+    }
+  }
+}
+
+@include tablet {
+  .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin: 0px 32px;
+
+    &__link {
+      flex-basis: calc((100% - 32px) / 2);
+    }
+
+    &__item {
+      margin: 0;
+      &-img {
+        width: 100vw;
+        height: 59.24vw;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .gallery {
+    max-width: 1280px;
+    gap: 16px;
+    margin: auto;
+    &__link {
+      flex-basis: calc((100% - 32px) / 3);
+    }
+    &__item {
+      &-img {
+        max-width: 395px;
+        max-height: 574px;
+      }
+    }
+  }
+}
+
+.btnUp {
+  background: none;
+  border: none;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  transition-duration: 250ms;
+  &:focus,
+  &:hover {
+    transition-duration: 250ms;
+    transform: scale(1.2);
+  }
+  &__icon {
+    fill: #ff6b08;
+  }
+}
