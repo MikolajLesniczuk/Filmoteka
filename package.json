@@ -1,21 +1,21 @@
 {
-  "name": "Filmoteka-team6",
+  "name": "Filmoteka",
   "version": "1.1.0",
   "description": "",
-  "homepage": "https://github.com/Rafal-Chojnacki/Filmoteka-team6",
+  "homepage": "https://github.com/MikolajLesniczuk/Filmoteka",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Filmoteka-team6/"
+    "build": "parcel build src/*.html --public-url /Filmoteka/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rafal-Chojnacki/Filmoteka-team6.git"
+    "url": "git+https://github.com/MikolajLesniczuk/Filmoteka.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Rafal-Chojnacki/Filmoteka-team6/issues"
+    "url": "https://github.com/MikolajLesniczuk/Filmoteka/issues"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.9.2",
